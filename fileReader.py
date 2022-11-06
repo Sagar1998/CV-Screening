@@ -5,7 +5,8 @@ import textract as tx
 import pandas as pd
 import os
 import tf_idf
-
+import nltk
+nltk.download('stopwords')
 resume_dir = "Data/Resumes/"
 job_desc_dir = "Data/JobDesc/"
 
