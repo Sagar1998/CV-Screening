@@ -3,6 +3,7 @@ from pathlib import Path
 import fileReader as fileReader
 import nltk
 nltk.download('stopwords')
+nltk.download('punkt')
 st.markdown("Upload Files")
 st.sidebar.markdown("Upload Files")
 st.title("Upload Resume")
