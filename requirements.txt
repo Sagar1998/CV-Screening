@@ -1,2 +1,1 @@
-click
-Exit
+click==7.1.1
