@@ -292,7 +292,7 @@ with st.form(key="Form1 :", clear_on_submit = False):
         options=org_Ranked_resumes)
     Submit3 = st.form_submit_button(label='Submit')
 
-import mammoth
+
 if Submit3:
     file_path=resume_dir+s_file
     if(s_file.split('.')[-1]=='pdf'):
