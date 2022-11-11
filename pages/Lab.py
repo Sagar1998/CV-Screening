@@ -14,7 +14,13 @@ from PIL import Image
 import time
 import os
 import page 
-
+import pdftotext
+import spacy
+from spacy.pipeline import EntityRuler
+from spacy import displacy
+import jsonlines
+nlp = spacy.load('en_core_web_sm')
+import pandas as pd
 
 image = Image.open('Images//logo.png')
 st.image(image, use_column_width=True)
@@ -60,16 +66,87 @@ st.markdown("---")
 
 #################################### SCORE CALCUATION ################################
 @st.cache()
-def calculate_scores(resumes, job_description):
-    scores = []
-    for x in range(resumes.shape[0]):
-        score = Similar.match(
-            resumes['TF_Based'][x], job_description['TF_Based'][index])
-        scores.append(score)
-    return scores
+def extract_text_from_word(txt):
+    '''Opens en reads in a .doc or .docx file from path'''  
+    return txt.replace('\n', ' ').replace('\t', ' ').lower()
+
+def add_newruler_to_pipeline(skill_pattern_path):
+    '''Reads in all created patterns from a JSONL file and adds it to the pipeline after PARSER and before NER'''
+    
+#     new_ruler = EntityRuler(nlp).from_disk(skill_pattern_path)
+    ruler=nlp.add_pipe("entity_ruler",after='parser')
+    ruler.from_disk(skill_pattern_path)  # loads patterns only
+    
+def create_skill_set(doc):
+    '''Create a set of the extracted skill entities of a doc'''
+    
+    return set([ent.label_.upper()[6:] for ent in doc.ents if 'skill' in ent.label_.lower()])
+
+def create_skillset_dict(resume_names, resume_texts):
+    '''Create a dictionary containing a set of the extracted skills. Name is key, matching skillset is value'''
+    skillsets = [create_skill_set(resume_text) for resume_text in resume_texts]
+    return dict(zip(resume_names, skillsets))
+    
+def match_skills(vacature_set, cv_set, resume_name):
+    '''Get intersection of resume skills and job offer skills and return match percentage'''
+    
+    if len(vacature_set) < 1:
+        print('could not extract skills from job offer text')   
+    else:
+        pct_match = round(len(vacature_set.intersection(cv_set[resume_name])) / len(vacature_set) * 100, 0)
+        print(resume_name + " has a {}% skill match on this JD".format(pct_match))
+        print('Required skills: {} '.format(vacature_set))
+        print('Matched skills: {} \n'.format(vacature_set.intersection(skillset_dict[resume_name])))
+        
+        return (resume_name, pct_match,vacature_set )
+def match(CV,JD):
+     resume_texts=[]
+     resume_texts=[nlp(CV)]
+     resume_names=['ABHI']
+     skillset_dict = create_skillset_dict(resume_names, resume_texts)
+     jd_skillset = create_skill_set(nlp(JD))
+    
+     match_pairs = [match_skills(jd_skillset, skillset_dict, name) for name in skillset_dict.keys()]
+     return match_pairs
+add_newruler_to_pipeline( "Data/skill_patterns.jsonl")
+
+cv=[]
+resume_texts=[]
+with jsonlines.open( "Data/skill_patterns.jsonl") as f:
+    created_entities = [line['label'].upper() for line in f.iter()]
+for i in range(len(Resumes['Name'])):
+    cv.append(Resumes['Context'][i])
+    resume_texts.append(nlp(cv[i]))
 
 
-Resumes['Scores'] = calculate_scores(Resumes, Jobs)
+jd=[]
+jd.append(Jobs['Context'][index])
+jd_skillset = create_skill_set(nlp(jd[0]))
+
+
+temp=[]
+scores_final=[]
+resume_names=Resumes['Name']
+for i in range(len(resume_names)):
+    skillset_dict = create_skillset_dict(resume_names, resume_texts)
+    temp.append(skillset_dict)
+# print(temp)
+
+
+# Create a list with tuple pairs containing the names of the candidates and their match percentage
+finn=[]
+all_resume_words=[]
+match_pairs = [match_skills(jd_skillset, skillset_dict, name) for name in skillset_dict.keys()]
+for i in match_pairs:
+    scores_final.append(i)
+for i in range(len(scores_final)):
+    finn.append(scores_final[i][1])
+    all_resume_words.append(scores_final[i][2])
+
+print(finn)
+print(all_resume_words)
+
+Resumes['Scores'] = finn
 
 Ranked_resumes = Resumes.sort_values(
     by=['Scores'], ascending=False).reset_index(drop=True)
@@ -175,61 +252,37 @@ def format_topics_sentences(ldamodel, corpus):
 ################################# Topic Word Cloud Code #####################################
 # st.sidebar.button('Hit Me')
 with col2:
-    option_yn12 = st.selectbox("Show the Word Cloud ?", options=['NO', 'YES'])
-    if option_yn12 == 'YES':
-            st.markdown("## Topics and Topic Related Keywords ")
-            st.markdown(
-                """This Wordcloud representation shows the Topic Number and the Top Keywords that contstitute a Topic.
-                This further is used to cluster the resumes.      """)
-
-            cols = [color for name, color in mcolors.TABLEAU_COLORS.items()]
-
-            cloud = WordCloud(background_color='white',
-                            width=2500,
-                            height=1800,
-                            max_words=10,
-                            colormap='tab10',
-                            collocations=False,
-                            color_func=lambda *args, **kwargs: cols[i],
-                            prefer_horizontal=1.0)
-
-            topics = lda_model.show_topics(formatted=False)
-
-            fig, axes = plt.subplots(2, 3, figsize=(10, 10), sharex=True, sharey=True)
-
-            for i, ax in enumerate(axes.flatten()):
-                fig.add_subplot(ax)
-                topic_words = dict(topics[i][1])
-                cloud.generate_from_frequencies(topic_words, max_font_size=300)
-                plt.gca().imshow(cloud)
-                plt.gca().set_title('Topic ' + str(i), fontdict=dict(size=16))
-                plt.gca().axis('off')
+    sel_resume = st.selectbox("Select resume ", options=list(temp[0].keys()))
+# st.text(temp[0][sel_resume])
 
 
-            plt.subplots_adjust(wspace=0, hspace=0)
-            plt.axis('off')
-            plt.margins(x=0, y=0)
-            plt.tight_layout()
-            st.pyplot(plt, use_container_width=True)
+    wordcloud = WordCloud(background_color='white').generate(",".join(temp[0][sel_resume]))
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+    plt.show()
+    st.pyplot(plt)
+    print(jd_skillset)
 
-st.markdown("---")
+#st.markdown("---")
 
 ####################### SETTING UP THE DATAFRAME FOR SUNBURST-GRAPH ############################
 
-df_topic_sents_keywords = format_topics_sentences(
-    ldamodel=lda_model, corpus=corpus)
-df_some = pd.DataFrame(df_topic_sents_keywords, columns=[
-                       'Document No', 'Dominant Topic', 'Topic % Contribution', 'Keywords'])
-df_some['Names'] = Resumes['Name']
+from matplotlib_venn_wordcloud import venn2_wordcloud
 
-df = df_some
+fig, ax = plt.subplots(figsize=(10,10))
+ax.set_title("Venn digram for Job features Vs resume", fontsize=20)
+v = venn2_wordcloud([set(jd_skillset), set(temp[0][sel_resume])],
+                    ax=ax, set_labels=["Job Features", "Resume :"+sel_resume])
+# add color
+v.get_patch_by_id("10").set_color("red")
+v.get_patch_by_id("10").set_alpha(0.4)
+v.get_patch_by_id("01").set_color("blue")
+v.get_patch_by_id("01").set_alpha(0.4)
+v.get_patch_by_id("11").set_color("purple")
+v.get_patch_by_id("11").set_alpha(0.4)
+st.pyplot(fig)
 
-st.markdown("## Topic Modelling of Resumes ")
-st.markdown(
-    "Using LDA to divide the topics into a number of usefull topics and creating a Cluster of matching topic resumes.  ")
-fig3 = px.sunburst(df, path=['Dominant Topic', 'Names'], values='Topic % Contribution',
-                   color='Dominant Topic', color_continuous_scale='viridis', width=800, height=800, title="Topic Distribution Graph")
-st.write(fig3)
+
 
 
 ############################## RESUME PRINTING #############################
@@ -239,6 +292,8 @@ with st.form(key="Form1 :", clear_on_submit = False):
         'Select the resume to display',
         options=org_Ranked_resumes)
     Submit3 = st.form_submit_button(label='Submit')
+
+import mammoth
 if Submit3:
     file_path=resume_dir+s_file
     if(s_file.split('.')[-1]=='pdf'):
@@ -246,7 +301,8 @@ if Submit3:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
             pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
             st.markdown(pdf_display, unsafe_allow_html=True)
-
-
+    elif(s_file.split('.')[-1]=='docx'):
+        text=mammoth.convert_to_markdown(file_path).value
+        st.markdown(text)
 
 
