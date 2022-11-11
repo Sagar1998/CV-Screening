@@ -1,1 +1,1 @@
-pdftotext
+pdftotext==2.2.1
