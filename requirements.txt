@@ -1,1 +1,1 @@
-matplotlib-venn-wordcloud
+pip install mammoth
