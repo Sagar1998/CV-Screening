@@ -20,7 +20,7 @@ from spacy import displacy
 import jsonlines
 nlp = spacy.load('en_core_web_sm')
 import pandas as pd
-
+import mammoth
 image = Image.open('Images//logo.png')
 st.image(image, use_column_width=True)
 
