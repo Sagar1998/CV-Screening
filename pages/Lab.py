@@ -14,7 +14,6 @@ from PIL import Image
 import time
 import os
 import page 
-import pdftotext
 import spacy
 from spacy.pipeline import EntityRuler
 from spacy import displacy
