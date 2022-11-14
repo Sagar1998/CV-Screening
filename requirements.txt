@@ -1,1 +1,1 @@
-scikit-learn
+streamlit_authenticator
