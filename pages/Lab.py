@@ -14,13 +14,20 @@ from PIL import Image
 import time
 import os
 import page 
+import pdftotext
 import spacy
 from spacy.pipeline import EntityRuler
 from spacy import displacy
 import jsonlines
 nlp = spacy.load('en_core_web_sm')
 import pandas as pd
-import mammoth
+import base64
+from matplotlib_venn_wordcloud import venn2_wordcloud
+
+if not st.session_state["authentication_status"]:
+    st.write('Please login')    
+    st.stop()
+
 image = Image.open('Images//logo.png')
 st.image(image, use_column_width=True)
 
@@ -145,6 +152,9 @@ for i in range(len(scores_final)):
 print(finn)
 print(all_resume_words)
 
+############ TODO SCORE IMPROVEMENT"####################
+
+
 Resumes['Scores'] = finn
 
 Ranked_resumes = Resumes.sort_values(
@@ -172,7 +182,6 @@ st.write(fig1,unsafe_allow_html=True)
 
 org_Ranked_resumes=list(Ranked_resumes['Name'])
 
-import base64
 resume_dir = "./Data/Resumes/"
 def encode(fx):
     es=None
@@ -251,7 +260,7 @@ def format_topics_sentences(ldamodel, corpus):
 ################################# Topic Word Cloud Code #####################################
 # st.sidebar.button('Hit Me')
 with col2:
-    sel_resume = st.selectbox("Select resume ", options=list(temp[0].keys()))
+    sel_resume = st.selectbox("Select resume ", options=org_Ranked_resumes)
 # st.text(temp[0][sel_resume])
 
 
@@ -266,7 +275,7 @@ with col2:
 
 ####################### SETTING UP THE DATAFRAME FOR SUNBURST-GRAPH ############################
 
-from matplotlib_venn_wordcloud import venn2_wordcloud
+
 
 fig, ax = plt.subplots(figsize=(10,10))
 ax.set_title("Venn digram for Job features Vs resume", fontsize=20)
@@ -292,7 +301,7 @@ with st.form(key="Form1 :", clear_on_submit = False):
         options=org_Ranked_resumes)
     Submit3 = st.form_submit_button(label='Submit')
 
-
+import mammoth
 if Submit3:
     file_path=resume_dir+s_file
     if(s_file.split('.')[-1]=='pdf'):
@@ -302,6 +311,16 @@ if Submit3:
             st.markdown(pdf_display, unsafe_allow_html=True)
     elif(s_file.split('.')[-1]=='docx'):
         text=mammoth.convert_to_markdown(file_path).value
-        st.markdown(text)
+        #st.markdown("#### {0} :".format(s_file))
+        fig = go.Figure(data=[go.Table(
+            header=dict(values=[s_file],
+                        fill_color='#f0a500',
+                        align='center', font=dict(color='white', size=16)),
+            cells=dict(values=[text],
+                    fill_color='#f4f4f4',
+                    align='left'))])
+
+        fig.update_layout(width=800, height=400)
+        st.write(fig)
 
 
