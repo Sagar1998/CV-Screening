@@ -6,7 +6,7 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml import SafeLoader
 import nltk
-nltk.download('important')
+nltk.download('stopwords')
 #hashed_passwords = stauth.Hasher(['123', '456']).generate()
 #print(hashed_passwords)
 #webbrowser.open('http://localhost:8501/Cv_&_JD_uploader')   <- login 
