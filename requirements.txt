@@ -1,1 +1,1 @@
-streamlit_authenticator
+click==7.0
