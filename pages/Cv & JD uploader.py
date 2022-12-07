@@ -7,6 +7,8 @@ if not st.session_state["authentication_status"]:
 else:
     from pathlib import Path
     import fileReader as fileReader
+    import nltk
+    nltk.download('stopwords')
     st.markdown("Upload Files")
     st.sidebar.markdown("Upload Files")
     st.title("Upload Resume")
