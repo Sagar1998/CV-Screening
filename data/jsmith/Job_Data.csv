@@ -1,0 +1,437 @@
+Name,Context,Entities
+IT-WDS-Data-Services-Java-Developer-JD.pdf,"Nomura Overview:
+Nomura is a leading financial services group and the pre-eminent Asia-based investment bank
+with worldwide reach. Nomura provides a broad range of innovative solutions tailored to the
+specific requirements of individual, institutional, corporate and government clients through an
+international network in 30 countries. Based in Tokyo and with regional headquarters in Hong Kong,
+London, and New York, Nomura employs about 26,000 staff worldwide. Nomuras unique
+understanding of Asia enables the company to make a difference for clients through three business
+divisions: domestic retail, global wholesale and asset management.
+Nomura Services India, (Powai) supports Nomuras businesses around the world. Powais world
+class capabilities in trading support, research, information technology, financial control, operations,
+risk management and legal support have played a key role in facilitating Nomuras global
+operations and are an integral part of Nomuras global expansion plans. The Powai operation is a
+critical part of the platform to support the growth of Nomuras global business.
+Nomura is an equal opportunities employer. We are committed to providing equal opportunities
+throughout employment including in the recruitment, training and development of employees
+(including promotion, transfers, assignments and beliefs). We prohibit discrimination in the
+workplace whether on grounds of gender, marital or domestic partnership status, pregnancy,
+careers responsibilities, sexual orientation, gender identity, race, color, national or ethnic origins,
+religious belief, disability or age. Our objective is to attract job applications from the best possible
+candidates and to retain the best people.
+Division Overview:
+Wholesale Technology provides technology solutions used by all functions within Nomura
+Wholesale. It supports a wide range of Business functions:
+ Global Markets Technology
+ Data Services Technology
+ Operations Technology
+ Risk & Capital Technology
+ IB & Client Services Technology
+The Wholesale Data Services Technology team in India is an integral part of the global team
+spread across all regions. It is a globally distributed team that is responsible to develop and
+maintain systems that manage acquisition and distribution of Instrument Data and Market Data for
+the entire organization including front office, middle office, back office, risk, finance and various AI
+based analytics systems.
+Roles & Responsibilities:
+This is an Individual Contributor position. The selected person would be a part of Data Services
+Technology focusing on global Instrument Data applications . The roles and responsibilities are as
+follows:
+ Develop and maintain state of the art large and complex Instrument data processing
+applications
+ Understand the existing business functions and participate in defining new solutions that meet
+their business objectives
+ Understand the overall ecosystem and develop appropriate integration solutions
+ Deliver high quality code within the committed deadlines
+ Adhere to the best coding practices that reduce technical debt
+ Expected to work with development and support team members across different regions
+
+
+
+
+
+
+
+
+
+
+Partner with analysts across the globe to understand the requirements and to define solutions
+Support resolution of production and user issues, application tes ting and maintenance releases
+Partner with external stakeholders for testing and implementation of the deliverables
+Provide regular updates regarding status or progress made to managers and stakeholders.
+Gain understanding of various applications and systems being developed by the peer groups
+Strong problem solving and analytical skills
+Good written and verbal communication skills
+Willing to learn new technologies / tools as required, in order to effectively deliver output
+
+Key Skills:
+Mandatory Skills:
+ 5-10 years of work experience with a solid understanding of Java and Spring
+ Good understanding of OOPS concepts, and design patterns
+ Strong understanding of working with Solace or Tibco EMS or RV or IBM MQ
+ Understanding of memory management, multi-threading - concurrency and synchronization.
+ Strong database knowledge of any one RDBMS (Sybase, Oracle, etc.)
+ Candidate should be a quick learner. Should have demonstrated in the past quick learning
+capabilities.
+ Strong listening, problem solving, analytical skills and excellent communication skills (both
+spoken and written English)
+ Must be a team player with prior experience in working in a global development team
+Desirable Skills:
+ Knowledge of instrument data domain
+ Working knowledge of Unix shell scripting, PERL and Python
+ Familiarity with Bloomberg and Reuters instrument data feeds
+ Experience in any Continuous Integration and Build environment
+ Industry exposure of Investment banking
+
+","JAVA,SPRING,PYTHON"
+Lead Technical Program Manager.docx,"Lead Technical Program Manager, Site Reliability Engineering
+
+Minimum qualifications:
+
+
+
+Bachelor's degree in Computer Science, a related technical field or equivalent practical experience.
+
+Experience managing end-to-end lifecycle of technical projects.
+
+Experience with Unix/Linux systems with scripting experience in Shell, Perl or Python.
+
+Experience in one or more of the following: C, C++, Java, Python.
+
+Preferred qualifications:
+
+
+
+Program management or technical management experience leading large-scale, cross-functional, and dynamic technical projects.
+
+Software engineering management or project management expertise.
+
+Ability to define strategic goals and organize a team and their services around delivering on those goals.
+
+Leadership skills and a passion for growing and building an effective TPM function within an SRE organization.
+
+Excellent communication skills, with ability to articulate your thoughts clearly and communicate across a wide variety of functions (SRE, Engineering) and levels.
+
+About the job
+
+Google's projects, like our users, span the globe and require managers to keep the big picture in focus while being able to dive into the unique engineering challenges we face daily. As a Technical Program Manager at Google, you lead complex, multi-disciplinary engineering projects using your engineering expertise. You plan requirements with internal customers and usher projects through the entire project lifecycle. This includes managing project schedules, identifying risks and clearly communicating them to project stakeholders. You're equally at home explaining your team's analyses and recommendations to executives as you are discussing the technical trade-offs in product development with engineers.
+
+
+
+In this role you will manage a group of Technical Program Managers (TPMs) working across a multitude of product groups who manage complex programs. The TPM role in SRE is at the core of preparing for the continued exponential growth of Google and other programs in Technical Infrastructure. TPMs play a pivotal role in ensuring that Google services/infrastructure are carefully planned and deployed in a time, place, and configuration which is ideal for serving Google's users. Your role sits at a nexus of capacity planning, technical project execution, product planning, site reliability and software engineering.
+
+
+
+Your leadership abilities will be drawn upon to assist the TPM function in delivering large, highly complex and cross-functional programs. You will be equally at home explaining analyses and project recommendations to executives as you are discussing the technical merits of next-generation architectures with engineers, or building tools to automate and scale their impact.
+
+
+
+Behind everything our users see online is the architecture built by the Technical Infrastructure team to keep it running. From developing and maintaining our data centers to building the next generation of Google platforms, we make Google's product portfolio possible. We're proud to be our engineers' engineers and love voiding warranties by taking things apart so we can rebuild them. We keep our networks up and running, ensuring our users have the best and fastest experience possible.
+
+
+
+Responsibilities
+
+Manage a team of TPMs working across all core networking groups and assist where necessary to ensure successful delivery of multiple programs concurrently. 
+
+Assist Director on operational management of Product Area.
+
+Collaborate with SRE leadership in key program decision making - including scope definition, requirements gathering, staffing, planning and execution of programs. 
+
+Work with cross-functional partners and manage the intake of work into teams in a process and scalable driven fashion. 
+
+Be responsible for the people and career development of TPMs and working to identify opportunities for exciting career challenges. Ensure there is flexibility and mobility opportunities also.","UNIX,LINUX,SHELL,PERL,PYTHON,C,C,JAVA"
+Marketing-Manager-Job.pdf,"Marketing Manager Job
+Description Template
+
+Marketing Manager Job Description
+Are you a creative Marketing Manager that is passionate about marketing campaigns and is always looking
+for ways to improve brand awareness?
+
+Marketing Manager Job Description Summary
+Our company is seeking a Marketing Manager to improve the volume, quality, and predictability of marketing
+qualified leads and marketing-sourced pipeline to deliver continued increases in marketing sourced revenue.
+You will be a willing team player, demonstrate excellent communication skills, and always be thinking of the
+next idea. You will understand that you are the custodian of the brand and will have a firm grasp on modern
+technology and various marketing platforms
+
+About Your Company
+[Insert 3-4 sentences summarizing what your company does. Share your mission, vision, and a little bit about
+your product or service.]
+
+Marketing Manager Responsibilities
+As a Marketing Manager at our company, you will:
+
+Plan and implement multiple marketing initiatives across various platforms.
+
+
+Content copywriting, graphic design, and video editing.
+
+
+SEO and SEM management and optimization.
+
+
+Measure, analyze and report on marketing campaigns against goals (ROI and KPIs).
+
+
+Developing and maintaining automation infrastructure.
+
+
+Collaboration with multiple stakeholders, both internal and external
+
+
+Management of social media, mail marketing, and influencer marketing activities.
+
+
+Manage projects within the marketing department adhering to the marketing strategy
+
+
+Prioritization and spend of marketing budget
+
+
+Report to the Chief Marketing Officer or equivalent
+
+
+[Add or delete details about the role where necessary]
+
+vervoe.com
+
+Marketing Manager Benefits
+[List all of your companys core benefits here]
+
+[This list might include health insurance, 401k matching, wellness or commuter reimbursements, and
+parental leave policies]
+
+[It also might mention nice perks like the offices location, your dog-friendly environment, a flexible
+vacation policy, or meals provided]
+
+[Consider mentioning industry-specific benefits]
+
+Marketing Manager Education and Qualifications
+A bachelors degree in marketing, business, advertising or another related field is not required to hire a
+good Marketing Manager. Vervoe believes in hiring marketing managers based off a skills assessment,
+rather than the education background on a resume.
+
+A minimum of 5 years in related marketing roles or marketing department does not guarantee job
+performance. Vervoe believes in hiring based off merit, not background.
+
+Pro Tip
+In building your candidate profile, remember youve already identified what skills are needed to
+succeed in the role. Heres where to list your must-have skills and maybe a couple of nice-tohave skills. For example, a Marketing Manager must have strong creative thinking skills, and it
+would be nice to have significant experience in creative graphic design.
+
+vervoe.com
+
+",NAN
+Primary English Teacher.docx,"Primary English Teacher
+
+Position Title: Facilitator for fREADom Live Classes
+Department: fREADom Mobile App
+Working with: Consumer App Team
+Location: comfort of your own home!
+
+About Stones2Milestones
+Stones2Milestones is on a mission to 'Create a Nation of Readers', gifting children the will and skill to read in English. We have created Indias most premier reading program for children of ages 3-9 and are currently impacting over 200,000 children in 110 schools across 50+ cities.
+A significant part of this reading program is the fREADom mobile app. The award-winning app, which parents and children use at home to bond over reading, has over 1500 stories, activities and news pieces for children to read and enjoy.
+The team believes that by helping children to 'Learn to Read' in elementary years, they enable them to 'Read to Learn' during formal education and eventually 'Read to Lead' in their chosen paths, helping them find their place in the world. Today, we are leveraging our technology platforms to grow our mission across three axes- age, geography and stakeholders.
+Position, Purpose and Key Responsibilities:
+We are looking to bring into our fold an incredible teacher/facilitator to conduct online classes for children of ages 6-10. These classes will be on topics related to phonics, vocabulary, comprehension, conversational English, storytelling and writing. They will be conducted via a video calling technology interface. Each class will be 45-60 minutes long. All the material you need to conduct the class will be provided.
+This is a monthly retainership role. You will not be a full time employee of the company unless offered otherwise. The classes will happen between 3 pm - 8 pm.
+Key Responsibilities:
+
+Conducting excellent and engaging live classes for children:
+
+Conducting a minimum of 12 classes a week and maximum of 20 classes in a week in a way that children are able to meet their learning outcomes.
+
+Improving constantly:
+
+Working relentlessly to improve the childrens class experience and own knowledge of facilitation, pedagogy and technology. Accept feedback and give the Stones2Milestones team constructive feedback on the classes, topic flow and resources as well.
+
+Adhering to administrative needs for all classes:
+
+Ensuring marking of attendance, correction of childrens homework and keeping all documentation up to date.
+Necessary prerequisites - skills
+
+Excellent communicative and written English
+
+Teaching experience (online or in a classroom)
+
+Ease of using or ability to learn and grasp technology like email, Google Slides and Google Sheets
+
+Necessary prerequisites - technology
+
+Strong, fully functioning and hi-speed Internet connection
+
+A good laptop or tablet, functioning webcam, good speaker
+
+A good smartphone
+
+Remuneration:
+(A) Skills, abilities and attitudes:
+
+Support of a great network of facilitators
+
+Opportunities for pedagogical development
+
+Ability to spend time with children who love and adore you, look forward to pleasing you
+
+(b) Monetary:
+
+2 classes/day - 11k/month
+
+3 classes/day - 17k/month
+
+Job Types: Full-time, Contract
+
+Experience:
+
+work: 1 year (Preferred)
+
+total work: 1 year (Preferred)
+
+Education:
+
+Bachelor's (Preferred)","GOOGLE SLIDES,GOOGLE SHEETS"
+Primary English Teacher.pdf,"Primary English Teacher
+Position Title: Facilitator for fREADom Live Classes
+Department: fREADom Mobile App
+Working with: Consumer App Team
+Location: comfort of your own home!
+About Stones2Milestones
+Stones2Milestones is on a mission to 'Create a Nation of Readers', gifting children the will and
+skill to read in English. We have created Indias most premier reading program for children of
+ages 3-9 and are currently impacting over 200,000 children in 110 schools across 50+ cities.
+A significant part of this reading program is the fREADom mobile app. The award-winning app,
+which parents and children use at home to bond over reading, has over 1500 stories, activities
+and news pieces for children to read and enjoy.
+The team believes that by helping children to 'Learn to Read' in elementary years, they enable
+them to 'Read to Learn' during formal education and eventually 'Read to Lead' in their chosen
+paths, helping them find their place in the world. Today, we are leveraging our technology
+platforms to grow our mission across three axes- age, geography and stakeholders.
+Position, Purpose and Key Responsibilities:
+We are looking to bring into our fold an incredible teacher/facilitator to conduct online classes for
+children of ages 6-10. These classes will be on topics related to phonics, vocabulary,
+comprehension, conversational English, storytelling and writing. They will be conducted via a
+video calling technology interface. Each class will be 45-60 minutes long. All the material you
+need to conduct the class will be provided.
+This is a monthly retainership role. You will not be a full time employee of the company unless
+offered otherwise. The classes will happen between 3 pm - 8 pm.
+Key Responsibilities:
+
+
+Conducting excellent and engaging live classes for children:
+
+Conducting a minimum of 12 classes a week and maximum of 20 classes in a week in a way that
+children are able to meet their learning outcomes.
+
+
+Improving constantly:
+
+Working relentlessly to improve the childrens class experience and own knowledge of
+facilitation, pedagogy and technology. Accept feedback and give the Stones2Milestones team
+constructive feedback on the classes, topic flow and resources as well.
+
+
+Adhering to administrative needs for all classes:
+
+Ensuring marking of attendance, correction of childrens homework and keeping all
+documentation up to date.
+Necessary prerequisites - skills
+
+
+Excellent communicative and written English
+
+
+
+Teaching experience (online or in a classroom)
+
+
+
+Ease of using or ability to learn and grasp technology like email, Google Slides and
+Google Sheets
+
+Necessary prerequisites - technology
+
+
+
+Strong, fully functioning and hi-speed Internet connection
+
+
+
+A good laptop or tablet, functioning webcam, good speaker
+
+
+
+A good smartphone
+
+Remuneration:
+(A) Skills, abilities and attitudes:
+
+
+Support of a great network of facilitators
+
+
+
+Opportunities for pedagogical development
+
+
+
+Ability to spend time with children who love and adore you, look forward to pleasing you
+
+(b) Monetary:
+2 classes/day - 11k/month
+3 classes/day - 17k/month
+Job Types: Full-time, Contract
+Experience:
+
+
+
+work: 1 year (Preferred)
+total work: 1 year (Preferred)
+
+Education:
+
+
+Bachelor's (Preferred)
+
+","GOOGLE SLIDES,GOOGLE SHEETS"
+RCT-BA-JD.pdf,"Nomura Overview:
+Nomura is an Asia-headquartered financial services group with an integrated global network spanning
+over 30 countries. By connecting markets East & West, Nomura services the needs of individuals,
+institutions, corporates and governments through its four business divisions: Retail, Asset Management,
+Wholesale (Global Markets and Investment Banking), and Merchant Banking. Founded in 1925, the
+firm is built on a tradition of disciplined entrepreneurship, serving clients with creative solutions and
+considered thought leadership. For further information about Nomura, visit www.nomura.com.
+Nomura Services India, (Powai) supports Nomuras businesses around the world. Powais world class
+capabilities in trading support, research, information technology, financial control, operations, risk
+management and legal support have played a key role in facilitating Nomuras global operations and
+are an integral part of Nomuras global expansion plans. The Powai operation is a critical part of the
+platform to support the growth of Nomuras global business.
+Guidelines:
+
+
+
+
+Relevant experience
+Minimum career break of 2yrs
+No of Positions :
+
+Role & Responsibilities:
+Lead Business Analyst with a necessary experience in
+ Market Risk Model Implementation, such as Var IRC, ESF.
+ SQL, hands on with writing queries and data analysis.
+ Basel III accords and related Market Risk Measures to arrive at Basel III Compliant Capital
+Requirements.
+ Communication Skill, Verbal and Written.
+Good to Have
+ Trade Life Cycle
+ Trade Reference Data such as Issuer, Obligor and various Exchange Traded and OTC
+Instruments.
+ FRTB SBA and IMA knowledge.
+Role: IT BA Role for
+ Support Existing Market Risk Models at Nomura
+ Build FRTB compliant Models for Nomura
+Responsibilities
+ Understand Business requirements and create technical specifications
+ Coordinate with Development team and participate in testing for correct and timely deliveries
+
+","SQL,BASEL III"

@@ -1,15 +1,13 @@
 import streamlit as st
 # st.markdown("# CvScrappers")
-import page 
+import page
 page.hid()
 import streamlit_authenticator as stauth
 import yaml
 from yaml import SafeLoader
-import nltk
-nltk.download('stopwords')
 #hashed_passwords = stauth.Hasher(['123', '456']).generate()
 #print(hashed_passwords)
-#webbrowser.open('http://localhost:8501/Cv_&_JD_uploader')   <- login 
+#webbrowser.open('http://localhost:8501/Cv_&_JD_uploader')   <- login
 with open('config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
 def savedetails(conf):
@@ -39,6 +37,11 @@ except Exception as e:
 if authentication_status:
         st.write(f'Welcome *{name}*')
         authenticator.logout('Logout', 'main')
+        if 'st_user' not in st.session_state:
+
+                st.session_state['st_user'] = username
+                print("seted user:"+st.session_state['st_user'])
+
         try:
                 if authenticator.reset_password(username, 'Reset password'):
                         st.success('Password modified successfully')
@@ -51,7 +54,7 @@ if authentication_status:
                                 st.success('User registered successfully')
                                 savedetails(config)
                 except Exception as e:
-                        st.error(e)   
+                        st.error(e)
 
 #webbrowser.open('http://localhost:8501/Cv_&_JD_uploader')
 elif authentication_status == False:

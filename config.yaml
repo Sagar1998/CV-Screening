@@ -9,11 +9,11 @@ credentials:
     jsmith:
       email: siddharthachaki02@gmail.com
       name: John Smith
-      password: $2b$12$6gSK0AEajt7Z8UZQaDKC3u4c8n0Rm7BU9VM34btyASNIGlnPiZD62
+      password: $2b$12$RClEpQ7A4PTrbaLzTSzqjOn7zzfd5tISVUZkjG9A.Uj83Ok4R4U/G
     rbriggs:
       email: siddharthachaki02@gmail.com
       name: Rebecca Briggs
-      password: $2b$12$PWqGorJ2qKYe1Eb3M6LT2uhaOMMMC85Tji7SXo/AiYpjfc7Bzt0va
+      password: $2b$12$k50p7GnX8LiN5/wUgFppo.yAqF2HpGVSHkHuWCsddUVbLfRtXdSM6
 preauthorized:
   emails:
   - siddharthachaki02@gmail.com
