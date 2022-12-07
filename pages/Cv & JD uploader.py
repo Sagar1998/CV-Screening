@@ -1,14 +1,13 @@
 import app
 import streamlit as st
-
+import nltk
+nltk.download('stopwords')
 if not st.session_state["authentication_status"]:
     st.write('Please login')    
     st.stop()
 else:
     from pathlib import Path
     import fileReader as fileReader
-    import nltk
-    nltk.download('stopwords')
     st.markdown("Upload Files")
     st.sidebar.markdown("Upload Files")
     st.title("Upload Resume")
